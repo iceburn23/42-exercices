@@ -1,0 +1,5 @@
+Credentials cache: API:4A0B651A-53FD-497B-9229-8E73DBA94A8B
+        Principal: hgoncalv@42LISBOA.COM
+
+  Issued                Expires               Principal
+Oct 21 17:41:22 2020  Oct 22 03:41:22 2020  krbtgt/42LISBOA.COM@42LISBOA.COM

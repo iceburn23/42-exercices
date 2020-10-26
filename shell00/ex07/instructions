@@ -1,0 +1,3 @@
+# -o (outfile) (original) (patchfile) 
+patch -o b a sw.diff
+
