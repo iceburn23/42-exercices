@@ -6,20 +6,21 @@
 /*   By: hgoncalv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 18:13:08 by hgoncalv          #+#    #+#             */
-/*   Updated: 2020/11/01 18:14:59 by hgoncalv         ###   ########.fr       */
+/*   Updated: 2020/11/03 12:24:28 by hgoncalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- void ft_rev_int_tab(int *tab, int size)
+void	ft_rev_int_tab(int *tab, int size)
 {
 	int tmp;
 	int i;
 
-	i=0;
-	while( i < size  / 2 )
-	{	
+	i = 0;
+	while (i < size / 2)
+	{
 		tmp = tab[i];
 		tab[i] = tab[size - 1 - i];
-		tab[size - 1 -i]
+		tab[size - 1 - i] = tmp;
+		i++;
 	}
 }
