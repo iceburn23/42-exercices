@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecaceres <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hgoncalv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/02 13:43:53 by ecaceres          #+#    #+#             */
-/*   Updated: 2019/08/02 13:43:55 by ecaceres         ###   ########.fr       */
+/*   Created: 2020/11/04 13:25:39 by hgoncalv          #+#    #+#             */
+/*   Updated: 2020/11/04 13:25:42 by hgoncalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@ void	ft_putchar(char c)
 bool	is_char_printable(char c)
 {
 	return (c >= ' ' && c != 127);
+}
+
+void	ft_write_hexa(char c)
+{
+	ft_putchar('\\');
+	ft_putchar("0123456789abcdef"[c / 16]);
+	ft_putchar("0123456789abcdef"[c % 16]);
 }
 
 void	ft_putstr_non_printable(char *str)
@@ -38,9 +45,7 @@ void	ft_putstr_non_printable(char *str)
 			ft_putchar(current);
 		else
 		{
-			ft_putchar('\\');
-			ft_putchar("0123456789abcdef"[current / 16]);
-			ft_putchar("0123456789abcdef"[current % 16]);
+			ft_write_hexa(current);
 		}
 		index++;
 	}
