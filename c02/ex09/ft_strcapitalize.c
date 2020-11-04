@@ -6,7 +6,7 @@
 /*   By: hgoncalv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 13:24:52 by hgoncalv          #+#    #+#             */
-/*   Updated: 2020/11/04 13:24:59 by hgoncalv         ###   ########.fr       */
+/*   Updated: 2020/11/04 15:58:53 by hgoncalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ bool	is_char_numeric(char c)
 
 void	delegate(char *str, bool *in_word)
 {
-	if (!in_word)
+	if (!*in_word)
 	{
 		ft_transform_char(str, true);
 		*in_word = true;

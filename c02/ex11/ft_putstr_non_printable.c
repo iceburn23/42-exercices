@@ -6,7 +6,7 @@
 /*   By: hgoncalv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 13:25:39 by hgoncalv          #+#    #+#             */
-/*   Updated: 2020/11/04 13:25:42 by hgoncalv         ###   ########.fr       */
+/*   Updated: 2020/11/04 16:12:24 by hgoncalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-bool	is_char_printable(char c)
+bool	is_char_printable(unsigned char c)
 {
-	return (c >= ' ' && c != 127);
+	return (c >= ' ' && c < 127);
 }
 
-void	ft_write_hexa(char c)
+void	ft_write_hexa(unsigned char c)
 {
 	ft_putchar('\\');
 	ft_putchar("0123456789abcdef"[c / 16]);
